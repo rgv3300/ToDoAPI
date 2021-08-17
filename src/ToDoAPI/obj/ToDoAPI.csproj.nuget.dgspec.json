@@ -41,6 +41,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.7, )"
             }
           },
           "imports": [
