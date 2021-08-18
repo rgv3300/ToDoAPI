@@ -16,8 +16,8 @@ namespace ToDoAPI.Data
         {
             return _taskContext.Tasks.ToList();
         }
-        public void DeleteTask() { }
-        public void AddTask() { }
-        public void UpdateTask() { }
+        public void DeleteTask() { return; }
+        public void AddTask() { return; }
+        public void UpdateTask() { return; }
     }
 }

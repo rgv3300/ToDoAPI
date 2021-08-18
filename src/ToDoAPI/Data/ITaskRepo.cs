@@ -8,8 +8,8 @@ namespace ToDoAPI.Data
     {
         IEnumerable<Task> GetTasks();
         void DeleteTask();
-        Task AddTask();
-        Task UpdateTask();
+        void AddTask();
+        void UpdateTask();
 
     }
 }
