@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ToDoAPI.Data;
 using Microsoft.Extensions.Configuration;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
+using Npgsql;
 
 
 namespace ToDoAPI
@@ -27,9 +28,11 @@ namespace ToDoAPI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            string DBConnection = _configuration.GetConnectionString("DefaultConnection");
-            services.AddControllers();
-            services.AddDbContext<TaskContext>(options => options.UseNpgsql(DBConnection));
+            NpgsqlConnectionStringBuilder builder = new NpgsqlConnectionStringBuilder();
+            builder.ConnectionString = _configuration.GetConnectionString("DefaultConnection");
+            builder.Username = _configuration["UserID"];
+            builder.Password = _configuration["Password"];
+            services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
 
         }
