@@ -34,6 +34,7 @@ namespace ToDoAPI
             builder.Password = _configuration["Password"];
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
+            services.AddControllers();
 
         }
 

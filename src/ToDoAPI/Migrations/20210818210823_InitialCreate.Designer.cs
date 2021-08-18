@@ -28,7 +28,7 @@ namespace ToDoAPI.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<DateTime>("DateDue")
+                    b.Property<DateTime>("DateDue") 
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Description")
