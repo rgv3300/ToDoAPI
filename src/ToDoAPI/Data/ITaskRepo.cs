@@ -6,10 +6,12 @@ namespace ToDoAPI.Data
 {
     public interface ITaskRepo
     {
+        int SaveChanges();
         IEnumerable<Task> GetTasks();
         void DeleteTask();
-        void AddTask();
+        void AddTask(Task task);
         void UpdateTask();
+
 
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jpwWEwrz23kNw4yAqb3Ygcdr41+NVHkqyzlaVIHR5pfqvDNY5CLvzLMgGDVqck2Glj4BRmmxMrhaMAmKZZm8QQ==",
+  "dgSpecHash": "MsFb92MrG4AxYqfpApZcV2ddvMtstoyiaW6nU9t5Oo1WELdlllfjJUWRA6JQkkQS/QP7S42CD7lSR4tNWKyEHA==",
   "success": true,
   "projectFilePath": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "/Users/raghavbhalla/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "/Users/raghavbhalla/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/npgsql/5.0.7/npgsql.5.0.7.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.7/npgsql.entityframeworkcore.postgresql.5.0.7.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",

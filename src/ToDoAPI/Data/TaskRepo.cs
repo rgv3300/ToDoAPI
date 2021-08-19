@@ -14,10 +14,25 @@ namespace ToDoAPI.Data
         }
         public IEnumerable<Task> GetTasks()
         {
-            return _taskContext.Tasks.ToList();
+            return _taskContext.Tasks;
         }
         public void DeleteTask() { return; }
-        public void AddTask() { return; }
+        public void AddTask(Task task)
+        {
+            try
+            {
+                _taskContext.Tasks.Add(task);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+        }
+        public int SaveChanges()
+        {
+            return _taskContext.SaveChanges();
+        }
         public void UpdateTask() { return; }
+
     }
 }

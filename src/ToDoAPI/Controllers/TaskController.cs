@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using ToDoAPI.Data;
 using System.Collections.Generic;
+using ToDoAPI.Models;
+using System.Net.Http;
 
 namespace ToDoAPI.Controllers
 {
@@ -14,9 +16,23 @@ namespace ToDoAPI.Controllers
             _myTask = myTask;
         }
         [HttpGet]
-        public ActionResult Get()
+        public ActionResult<IEnumerable<Task>> Get()
         {
             return Ok(_myTask.GetTasks());
+        }
+        [HttpPost]
+        public ActionResult<Task> Create(Task task)
+        {
+            if (ModelState.IsValid)
+            {
+                _myTask.AddTask(task);
+                _myTask.SaveChanges();
+                return CreatedAtAction(nameof(Get), task);
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
     }
 }
