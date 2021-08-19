@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/raghavbhalla/csharp/ToDoAPI/tests/tests.csproj": {}
+    "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/tests/tests.csproj": {}
   },
   "projects": {
-    "/Users/raghavbhalla/csharp/ToDoAPI/tests/tests.csproj": {
+    "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/tests/tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/raghavbhalla/csharp/ToDoAPI/tests/tests.csproj",
+        "projectUniqueName": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/tests/tests.csproj",
         "projectName": "tests",
-        "projectPath": "/Users/raghavbhalla/csharp/ToDoAPI/tests/tests.csproj",
+        "projectPath": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/tests/tests.csproj",
         "packagesPath": "/Users/raghavbhalla/.nuget/packages/",
-        "outputPath": "/Users/raghavbhalla/csharp/ToDoAPI/tests/obj/",
+        "outputPath": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/tests/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/raghavbhalla/.nuget/NuGet/NuGet.Config"

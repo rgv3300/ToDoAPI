@@ -8,7 +8,7 @@ namespace ToDoAPI.Data
     {
         int SaveChanges();
         IEnumerable<Task> GetTasks();
-        void DeleteTask();
+        void DeleteTask(Task task);
         void AddTask(Task task);
         void UpdateTask();
 

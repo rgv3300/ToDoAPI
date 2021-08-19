@@ -1,6 +1,7 @@
 using ToDoAPI.Models;
 using System.Collections.Generic;
 using System;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
 namespace ToDoAPI.Data
@@ -16,7 +17,17 @@ namespace ToDoAPI.Data
         {
             return _taskContext.Tasks;
         }
-        public void DeleteTask() { return; }
+        public void DeleteTask(Task task)
+        {
+            if (_taskContext.Tasks.Any(t => t.ID == task.ID))
+            {
+                _taskContext.Tasks.Remove(task);
+            }
+            else
+            {
+                throw new ArgumentException("No such task exists.");
+            }
+        }
         public void AddTask(Task task)
         {
             try

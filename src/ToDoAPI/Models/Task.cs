@@ -2,7 +2,6 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json.Serialization;
 
 namespace ToDoAPI.Models
 {
@@ -17,8 +16,6 @@ namespace ToDoAPI.Models
         [DataType(DataType.DateTime)]
         public DateTime DateDue { get; set; }
 
-
-        [JsonIgnore]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }

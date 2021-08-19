@@ -34,5 +34,19 @@ namespace ToDoAPI.Controllers
                 return BadRequest();
             }
         }
+        [HttpDelete]
+        public ActionResult Delete(Task task)
+        {
+            if (ModelState.IsValid)
+            {
+                _myTask.DeleteTask(task);
+                _myTask.SaveChanges();
+                return Ok();
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
     }
 }
