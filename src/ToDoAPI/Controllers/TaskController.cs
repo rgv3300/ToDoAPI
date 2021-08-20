@@ -45,11 +45,20 @@ namespace ToDoAPI.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
+            var TaskExists = _myTask.GetTaskById(id);
+
             if (ModelState.IsValid)
             {
-                _myTask.DeleteTask(id);
-                _myTask.SaveChanges();
-                return Ok();
+                if (TaskExists != null)
+                {
+                    _myTask.DeleteTask(id);
+                    _myTask.SaveChanges();
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
             else
             {
