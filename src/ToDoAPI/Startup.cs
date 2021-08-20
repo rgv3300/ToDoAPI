@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
@@ -11,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using ToDoAPI.Data;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
+
 
 
 namespace ToDoAPI
@@ -34,7 +39,7 @@ namespace ToDoAPI
             builder.Password = _configuration["Password"];
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
 
         }
 

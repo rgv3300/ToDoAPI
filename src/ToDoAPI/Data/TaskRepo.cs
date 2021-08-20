@@ -17,11 +17,12 @@ namespace ToDoAPI.Data
         {
             return _taskContext.Tasks;
         }
-        public void DeleteTask(Task task)
+        public void DeleteTask(int id)
         {
-            if (_taskContext.Tasks.Any(t => t.ID == task.ID))
+            var TaskExists = _taskContext.Tasks.Find(id);
+            if (TaskExists.ID == id)
             {
-                _taskContext.Tasks.Remove(task);
+                _taskContext.Tasks.Remove(TaskExists);
             }
             else
             {
@@ -43,7 +44,10 @@ namespace ToDoAPI.Data
         {
             return _taskContext.SaveChanges();
         }
+        public Task GetTaskById(int id)
+        {
+            return _taskContext.Tasks.Find(id);
+        }
         public void UpdateTask() { return; }
-
     }
 }
