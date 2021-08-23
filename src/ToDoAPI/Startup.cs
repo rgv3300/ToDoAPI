@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -40,6 +41,7 @@ namespace ToDoAPI
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
+
 
         }
 
