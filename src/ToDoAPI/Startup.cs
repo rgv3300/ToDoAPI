@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using ToDoAPI.Data;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
+using ToDoAPI.Controllers;
 
 
 
@@ -41,8 +42,6 @@ namespace ToDoAPI
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
