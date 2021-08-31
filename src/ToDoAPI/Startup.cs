@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using ToDoAPI.Data;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
+using ToDoAPI.Models;
 using ToDoAPI.Controllers;
 
 
@@ -36,10 +37,13 @@ namespace ToDoAPI
         public void ConfigureServices(IServiceCollection services)
         {
             NpgsqlConnectionStringBuilder builder = new NpgsqlConnectionStringBuilder();
+            NpgsqlConnectionStringBuilder userDB = new NpgsqlConnectionStringBuilder();
+            userDB.ConnectionString = _configuration.GetConnectionString("UserConnection");
             builder.ConnectionString = _configuration.GetConnectionString("DefaultConnection");
             builder.Username = _configuration["UserID"];
             builder.Password = _configuration["Password"];
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
+            services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
         }

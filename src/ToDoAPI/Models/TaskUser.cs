@@ -15,6 +15,8 @@ namespace ToDoAPI.Models
         [Required]
         [Key]
         public string Email { get; set; }
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
     }
     public class TaskUserContext : DbContext
     {
