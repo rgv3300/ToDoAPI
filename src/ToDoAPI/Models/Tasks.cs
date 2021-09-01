@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ToDoAPI.Models
 {
-    public class Task
+    public class Tasks
     {
         [Required]
         [MaxLength(200)]

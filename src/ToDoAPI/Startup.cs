@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Hosting;
+
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -44,7 +46,8 @@ namespace ToDoAPI
             builder.Password = _configuration["Password"];
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
-            services.AddIdentity<IdentityUser, IdentityRole>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                    .AddEntityFrameworkStores<TaskUserContext>();
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
         }
@@ -58,6 +61,7 @@ namespace ToDoAPI
             }
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

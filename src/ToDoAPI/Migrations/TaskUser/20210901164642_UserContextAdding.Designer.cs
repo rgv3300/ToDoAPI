@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ToDoAPI.Models;
@@ -9,9 +10,10 @@ using ToDoAPI.Models;
 namespace ToDoAPI.Migrations.TaskUser
 {
     [DbContext(typeof(TaskUserContext))]
-    partial class TaskUserContextModelSnapshot : ModelSnapshot
+    [Migration("20210901164642_UserContextAdding")]
+    partial class UserContextAdding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
