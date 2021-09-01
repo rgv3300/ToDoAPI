@@ -5,7 +5,8 @@ namespace ToDoAPI.Data
 {
     public interface IUserRepo
     {
-        public void LoginUser() { }
-
+        void LoginUser(TaskUser taskUser);
+        void RegisterUser(TaskUser taskUser);
+        void LogoutUser(TaskUser taskUser);
     }
 }

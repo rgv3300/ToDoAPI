@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ToDoAPI.Models
@@ -18,7 +19,7 @@ namespace ToDoAPI.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
-    public class TaskUserContext : DbContext
+    public class TaskUserContext : IdentityDbContext
     {
         public TaskUserContext(DbContextOptions<TaskUserContext> options) : base(options)
         {

@@ -44,6 +44,7 @@ namespace ToDoAPI
             builder.Password = _configuration["Password"];
             services.AddDbContext<TaskContext>(options => options.UseNpgsql(builder.ConnectionString));
             services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
+            services.AddIdentity<IdentityUser, IdentityRole>();
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
         }
