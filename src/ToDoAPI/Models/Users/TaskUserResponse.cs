@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace ToDoAPI.Models.Users
 {
     public class TaskUserResponse
