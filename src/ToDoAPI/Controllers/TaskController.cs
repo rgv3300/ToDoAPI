@@ -17,12 +17,12 @@ namespace ToDoAPI.Controllers
             _myTask = myTask;
         }
         [HttpGet]
-        public ActionResult<IEnumerable<Task>> Get()
+        public ActionResult<IEnumerable<Tasks>> Get()
         {
             return Ok(_myTask.GetTasks());
         }
         [HttpPost]
-        public ActionResult<Task> Create(Task task)
+        public ActionResult<Tasks> Create(Tasks task)
         {
             var TaskExists = _myTask.GetTaskById(task.ID);
 
@@ -66,7 +66,7 @@ namespace ToDoAPI.Controllers
             }
         }
         [HttpPatch("{id}")]
-        public ActionResult Update(int id, [FromBody] JsonPatchDocument<Task> patchTask)
+        public ActionResult Update(int id, [FromBody] JsonPatchDocument<Tasks> patchTask)
         {
 
             if (patchTask != null)

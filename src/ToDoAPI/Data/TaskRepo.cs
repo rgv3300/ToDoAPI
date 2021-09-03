@@ -13,7 +13,7 @@ namespace ToDoAPI.Data
         {
             _taskContext = myTaskContext;
         }
-        public IEnumerable<Task> GetTasks()
+        public IEnumerable<Tasks> GetTasks()
         {
             return _taskContext.Tasks;
         }
@@ -29,7 +29,7 @@ namespace ToDoAPI.Data
                 throw new ArgumentException("No such task exists.");
             }
         }
-        public void AddTask(Task task)
+        public void AddTask(Tasks task)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace ToDoAPI.Data
         {
             return _taskContext.SaveChanges();
         }
-        public Task GetTaskById(int id)
+        public Tasks GetTaskById(int id)
         {
             return _taskContext.Tasks.Find(id);
         }

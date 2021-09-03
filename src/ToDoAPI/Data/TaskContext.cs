@@ -9,6 +9,6 @@ namespace ToDoAPI.Data
         {
 
         }
-        public DbSet<Task> Tasks { get; set; }
+        public DbSet<Tasks> Tasks { get; set; }
     }
 }

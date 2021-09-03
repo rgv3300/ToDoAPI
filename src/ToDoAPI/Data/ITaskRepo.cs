@@ -7,11 +7,11 @@ namespace ToDoAPI.Data
     public interface ITaskRepo
     {
         int SaveChanges();
-        IEnumerable<Task> GetTasks();
+        IEnumerable<Tasks> GetTasks();
         void DeleteTask(int id);
-        void AddTask(Task task);
+        void AddTask(Tasks task);
         void UpdateTask();
-        Task GetTaskById(int id);
+        Tasks GetTaskById(int id);
 
     }
 }

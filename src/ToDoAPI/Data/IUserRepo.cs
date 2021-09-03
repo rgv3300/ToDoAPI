@@ -1,14 +1,13 @@
-using ToDoAPI.Models;
-using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using ToDoAPI.Models.Users;
+
 
 namespace ToDoAPI.Data
 {
     public interface IUserRepo
     {
-        Task<IdentityResult> LoginUser(TaskUser taskUser);
-        void RegisterUser(TaskUser taskUser);
-        void LogoutUser(TaskUser taskUser);
+        TaskUserResponse Authenticate(TaskUserRequest taskUser);
+        void Register(TaskUserRegister taskUser);
+        void Update(int id, TaskUserUpdate taskUser);
+        void Delete(int id);
     }
 }
