@@ -31,7 +31,7 @@ namespace ToDoAPI
             userDB.ConnectionString = _configuration.GetConnectionString("UserConnection");
             services.AddDbContext<TaskContext>();
             services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
-            services.Configure<AppSettings>(_configuration.GetSection("AppSettings"));
+            services.Configure<AppSettings>(_configuration.GetSection(AppSettings.Settings));
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
         }
