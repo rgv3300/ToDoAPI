@@ -31,12 +31,10 @@ namespace ToDoAPI
             userDB.ConnectionString = _configuration.GetConnectionString("UserConnection");
             services.AddDbContext<TaskContext>();
             services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
-            services.Configure<AppSettings>(_configuration.GetSection(AppSettings.Settings));
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -49,10 +47,7 @@ namespace ToDoAPI
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}"
-                    );
+                endpoints.MapControllers();
             });
         }
     }
