@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Npgsql;
 using ToDoAPI.Models;
 using ToDoAPI.Models.Users;
+using ToDoAPI.AuthService;
 
 
 
@@ -34,6 +35,8 @@ namespace ToDoAPI
             services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();
             services.AddControllers().AddNewtonsoftJson();
+            services.AddScoped<IJwtUtils, JwtUtils>();
+            // services.AddScoped<IUserRepo, UserRepo>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -44,7 +47,8 @@ namespace ToDoAPI
             }
 
             app.UseRouting();
-            app.UseAuthentication();
+
+            app.UseMiddleware<JwtMiddleWare>();
 
             app.UseEndpoints(endpoints =>
             {
