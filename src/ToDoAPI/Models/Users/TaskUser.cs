@@ -5,10 +5,11 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ToDoAPI.Models
+namespace ToDoAPI.Models.Users
 {
     public class TaskUser
     {
+        public int Id { get; set; }
         [Required]
 
         public string FirstName { get; set; }

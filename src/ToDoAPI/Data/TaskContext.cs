@@ -11,7 +11,7 @@ namespace ToDoAPI.Data
         private readonly IConfiguration _configuration;
         public TaskContext(DbContextOptions<TaskContext> options, IConfiguration configuration) : base(options)
         {
-            configuration = _configuration;
+            _configuration = configuration;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

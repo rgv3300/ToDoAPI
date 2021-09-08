@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a+8i6sr1M9bSbmLX3w7UN9/5QZ/A1WXZVTA6tQjQYZz99TH19vBgQWrwEgcNMQcHu1rsZXF5tMR7g1Fd6MzlZw==",
+  "dgSpecHash": "GfMVVDJeo8nGDjJpk4zND+H26x9bXpAFeKNOyBZbBaezsgohSrzLTgA18wtrfTc5p8DXWycMWhUZ8Z25sw4P7w==",
   "success": true,
-  "projectFilePath": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
+  "projectFilePath": "/Users/raghavbhalla/csharp/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
   "expectedPackageFiles": [
     "/Users/raghavbhalla/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.aspnetcore.authentication/2.2.0/microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
@@ -45,6 +45,9 @@
     "/Users/raghavbhalla/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg.sha512",
+    "/Users/raghavbhalla/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.12.2/microsoft.identitymodel.jsonwebtokens.6.12.2.nupkg.sha512",
+    "/Users/raghavbhalla/.nuget/packages/microsoft.identitymodel.logging/6.12.2/microsoft.identitymodel.logging.6.12.2.nupkg.sha512",
+    "/Users/raghavbhalla/.nuget/packages/microsoft.identitymodel.tokens/6.12.2/microsoft.identitymodel.tokens.6.12.2.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/microsoft.win32.registry/4.5.0/microsoft.win32.registry.4.5.0.nupkg.sha512",
@@ -56,6 +59,7 @@
     "/Users/raghavbhalla/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "/Users/raghavbhalla/.nuget/packages/system.identitymodel.tokens.jwt/6.12.2/system.identitymodel.tokens.jwt.6.12.2.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
     "/Users/raghavbhalla/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",

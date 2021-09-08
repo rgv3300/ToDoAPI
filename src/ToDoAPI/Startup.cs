@@ -8,7 +8,7 @@ using ToDoAPI.Data;
 using Microsoft.Extensions.Configuration;
 using Npgsql;
 using ToDoAPI.Models;
-using ToDoAPI.Config;
+using ToDoAPI.Models.Users;
 
 
 
@@ -29,6 +29,7 @@ namespace ToDoAPI
         {
             NpgsqlConnectionStringBuilder userDB = new NpgsqlConnectionStringBuilder();
             userDB.ConnectionString = _configuration.GetConnectionString("UserConnection");
+
             services.AddDbContext<TaskContext>();
             services.AddDbContext<TaskUserContext>(options => options.UseNpgsql(userDB.ConnectionString));
             services.AddScoped<ITaskRepo, TaskRepo>();

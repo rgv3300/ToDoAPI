@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj": {}
+    "/Users/raghavbhalla/csharp/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj": {}
   },
   "projects": {
-    "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj": {
+    "/Users/raghavbhalla/csharp/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
+        "projectUniqueName": "/Users/raghavbhalla/csharp/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
         "projectName": "ToDoAPI",
-        "projectPath": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
+        "projectPath": "/Users/raghavbhalla/csharp/ToDoAPI/src/ToDoAPI/ToDoAPI.csproj",
         "packagesPath": "/Users/raghavbhalla/.nuget/packages/",
-        "outputPath": "/Users/raghavbhalla/csharp/ToDoAPI/ToDoAPI/src/ToDoAPI/obj/",
+        "outputPath": "/Users/raghavbhalla/csharp/ToDoAPI/src/ToDoAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/raghavbhalla/.nuget/NuGet/NuGet.Config"
@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.12.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -67,6 +71,10 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[5.0.7, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.12.2, )"
             }
           },
           "imports": [
