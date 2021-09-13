@@ -48,6 +48,11 @@ namespace ToDoAPI
 
             app.UseRouting();
 
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader())
+
             app.UseMiddleware<JwtMiddleWare>();
 
             app.UseEndpoints(endpoints =>
